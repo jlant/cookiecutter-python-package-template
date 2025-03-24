@@ -59,7 +59,7 @@ To start developing your newly created Python package, please do the following:
 
 .. code:: bash
 
-   python -m venv venv
+   python3 -m venv venv
 
 2. Activate the virtual environment
 
