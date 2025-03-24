@@ -1,0 +1,9 @@
+{
+    "author": "Jeremiah Lant",
+    "email": "jeremiahlant@gmail.com",
+    "package_name": "Hello World",
+    "package_name_hyphenated": "{{ '-'.join(cookiecutter['package_name'].lower().split()).replace('_', '-') }}",
+    "package_name_underscored": "{{ cookiecutter.package_name_hyphenated.replace('-', '_') }}",
+    "package_short_description": "Hello World contains all the boilerplate you need to create a Python package.",
+    "package_version": "0.1.0"
+}

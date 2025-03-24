@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{ cookiecutter.package_name_hyphenated }}"
+description = "{{ cookiecutter.package_short_description }}"
+readme = "README.rst"
+requires-python = ">=3.9"
+dynamic = ["version"]
+authors = [
+  {name = "{{cookiecutter.author}}", email = "{{cookiecutter.email}}"}
+]
+maintainers = [
+  {name = "{{cookiecutter.author}}", email = "{{cookiecutter.email}}"}
+]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "click"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "flake8",
+    "black",
+    "isort",
+    "sphinx",
+]
+
+[project.scripts]
+{{ cookiecutter.package_name_hyphenated }} = "{{ cookiecutter.package_name_underscored }}.cli:cli"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.dynamic]
+version = {attr = "{{ cookiecutter.package_name_underscored }}.__version__"}
