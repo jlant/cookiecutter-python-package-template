@@ -1,7 +1,7 @@
 ﻿cookiecutter-python-package-template
 ====================================
 
-*A simple Cookiecutter_ Python package template.*
+*A simple Cookiecutter Python package template.*
 
 
 Features
@@ -16,7 +16,7 @@ Features
 Quick Start
 -----------
 To create a new Python_ package, run the Cookiecutter_ program in a directory
-of your choice with the URL of this cookiecutter-python-package-template_ template:
+of your choice with the URL of this cookiecutter-python-package-template_:
 
 .. code:: bash
 
@@ -67,13 +67,13 @@ To start developing your newly created Python package, please do the following:
 
    source venv/bin/activate
 
-3. Install the development dependenices listed in the `pyproject.toml` file in editable
-   mode
+3. Install the *development* dependenices listed in the `pyproject.toml` file in editable mode
 
 .. code:: bash
+
    python -m pip install -e ".[dev]"
 
-4. Confirm the package can be run from the Click_ command line interface:
+4. Confirm the package can be run from the Click_ command line interface
 
 .. code:: bash
 
@@ -123,16 +123,11 @@ Dependencies
 ------------
 * Cookiecutter_
 
-Install Cookiecutter_ using ``pip``:
+Install Cookiecutter_ using pip_:
 
 .. code:: bash
 
    pip install cookiecutter
-
-
-Acknowledgements
-----------------
-Thank you Cookiecutter_!
 
 
 Author
@@ -150,6 +145,7 @@ References
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
 .. _Click: https://click.palletsprojects.com/en/7.x/
 .. _Python: https://www.python.org/
+.. _pip: https://pip.pypa.io/en/stable/
 .. _pytest: https://docs.pytest.org/en/latest/
 .. _Sphinx: http://www.sphinx-doc.org/en/master/
 .. _Makefile: https://en.wikipedia.org/wiki/Makefile
