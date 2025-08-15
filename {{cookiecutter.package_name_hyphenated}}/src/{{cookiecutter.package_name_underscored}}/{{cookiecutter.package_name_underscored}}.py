@@ -47,8 +47,18 @@ def count_words(text: str) -> Dict[str, int]:
         The sorted dictionary mapping of word to word count
 
     """
-    words = (word.strip(string.punctuation).lower() for word in text.split())
-    return dict(Counter(words).most_common())
+    words = text.split()
+    words_generator_object = (
+        word.strip(string.punctuation) for word in words
+    )
+    filtered_words = (word for word in words_generator_object if word)
+    words_counter = Counter(filtered_words)
+    words_dict = dict(words_counter)
+    words_dict_sorted = dict(
+            sorted(words_dict.items(), key=lambda item: item[1], reverse=True)
+    )
+
+    return words_dict_sorted
 
 
 def main():

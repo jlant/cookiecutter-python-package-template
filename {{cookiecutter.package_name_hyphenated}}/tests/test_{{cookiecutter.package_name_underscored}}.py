@@ -1,6 +1,8 @@
 from click.testing import CliRunner
 from {{ cookiecutter.package_name_underscored }}.cli import cli
-from {{ cookiecutter.package_name_underscored }}.{{ cookiecutter.package_name_underscored }} import count_words
+from {{ cookiecutter.package_name_underscored }}.{{ cookiecutter.package_name_underscored }} import (
+    count_words,
+)
 
 
 def test_version():
@@ -11,7 +13,15 @@ def test_version():
         assert result.output.startswith("cli, version ")
 
 
+
+def test_count_words_punctuation_tokens():
+    text = "Hello!!! ???"
+    result = count_words(text)
+    assert "" not in result
+    assert result == {"Hello": 1}
+
 def test_count_words_basic():
     """Ensure words are counted case-insensitively and punctuation is ignored."""
     text = "Hello hello, world!"
     assert count_words(text) == {"hello": 2, "world": 1}
+
