@@ -143,7 +143,7 @@ References
 * `Simon Willison's Weblog - Things I've learned about building CLI tools in Python`_
 
 .. _Cookiecutter: https://github.com/cookiecutter/cookiecutter
-.. _Click: https://click.palletsprojects.com/en/7.x/
+.. _Click: https://click.palletsprojects.com/en/stable/
 .. _Python: https://www.python.org/
 .. _pip: https://pip.pypa.io/en/stable/
 .. _pytest: https://docs.pytest.org/en/latest/
