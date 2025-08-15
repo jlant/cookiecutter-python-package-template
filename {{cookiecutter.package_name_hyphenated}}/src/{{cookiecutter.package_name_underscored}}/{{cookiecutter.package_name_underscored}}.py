@@ -32,8 +32,9 @@ from typing import Dict
 def count_words(text: str) -> Dict[str, int]:
     """Count words in a given text string.
 
-    Count the number of words in a given text string, and return a dictionary
-    sorted by the number of words in descending order.
+    Count the number of words in a given text string, ignoring case and
+    punctuation, and return a dictionary sorted by the number of words in
+    descending order.
 
     Parameters
     ----------

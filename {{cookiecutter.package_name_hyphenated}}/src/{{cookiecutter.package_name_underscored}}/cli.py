@@ -29,7 +29,7 @@ def cli(verbose):
         "Add Click commands and groups to the command line interface at "
         "src/{{ cookiecutter.package_name_underscored }}/cli.py"
     )
-    click.echo("See Click documenation at https://click.palletsprojects.com/en/stable/")
+    click.echo("See Click documentation at https://click.palletsprojects.com/en/stable/")
     click.echo(
         "Add your code as your see fit to the module at "
         "src/{{ cookiecutter.package_name_underscored }}/{{ cookiecutter.package_name_underscored }}.py"
