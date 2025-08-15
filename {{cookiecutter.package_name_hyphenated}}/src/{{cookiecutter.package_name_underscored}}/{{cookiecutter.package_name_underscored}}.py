@@ -47,8 +47,11 @@ def count_words(text: str) -> Dict[str, int]:
 
     """
     words = text.split()
-    words_generator_object = (word.strip(string.punctuation) for word in words)
-    words_counter = Counter(words_generator_object)
+    words_generator_object = (
+        word.strip(string.punctuation) for word in words
+    )
+    filtered_words = (word for word in words_generator_object if word)
+    words_counter = Counter(filtered_words)
     words_dict = dict(words_counter)
     words_dict_sorted = dict(
             sorted(words_dict.items(), key=lambda item: item[1], reverse=True)
